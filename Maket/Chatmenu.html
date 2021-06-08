@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Point Messager</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+<div class="head">
+    <div class="container headPointMessager">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-pointmessager">
+            <div class="container-fluid">
+                 <defs>
+                    <svg>
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
+                        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="burger" />
+                        <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+                    </svg>
+                  <div class="plates">
+                    <div class="plate plate5" onclick="this.classList.toggle('active')">
+                      <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 30,35 H 70 " />
+                        <path class="line line2" d="M 50,50 H 30 L 34,32" />
+                        <path class="line line3" d="M 50,50 H 70 L 66,68" />
+                        <path class="line line4" d="M 30,65 H 70 " />
+                      </svg>
+                      <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                        <path class="line" d="M 34,32 L 66,68" />
+                        <path class="line" d="M 66,32 L 34,68" />
+                      </svg>
+                    </div>
+                    </div>
+                </defs>
+                
+                <a class="navbar-brand navbar-pointmessager navbar-fontpointmessager" href="#">PointMessager</a>
+            </div>
+            <div class="dropdownpointmessager">
+                <div id="modal1" class="groupburger" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Новая группа</div>
+                <div id="modal2" class="contactsburger" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" >Контакты</div>
+                <div id="modal3" class="settingsburger" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >Настройки</div>
+            </div> 
+        </nav>
+
+</div>
+<div class="container bodyPointMessager">
+    <div class="dialogs">
+        <div class="dialogs_search">
+            <input class="form-control im_dialogs_search_field" type="search" placeholder="Поиск" autocomplete="off">
+        </div>
+        <div class="alldialogs">
+            <div class="alldialogsitem">
+                <img src="img/anton.png" alt="anton">
+                
+                <div class="dialoginfo"><span class="name">Anton</span><span class="message">Lorem ipsum dolor sit abcdefghjiklm</span></div>
+            </div>
+            <div class="alldialogsitem">
+                <img src="img/anton.png" alt="anton">
+                <div class="dialoginfo"><span class="name">Anton</span><span class="message">Lorem ipsum dolor sit amet.</span></div>
+            </div>
+            <div class="alldialogsitem">
+                <img src="img/anton.png" alt="anton">
+                <div class="dialoginfo"><span class="name">Anton</span><span class="message">Lorem ipsum dolor sit amet.</span></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="dialogshistory">
+        <div class="headerdialogs"><span class="name"></span>
+        <span class="headername">Anton</span>
+        <div class="alldialogsitem"></div>
+        </div>
+        <div class="bodydialogs">
+            <div class="allchatsitem">
+                <img src="img/anton.png" alt="anton">
+                <div class="chatblock"><span class="message">Lorem ipsum dolor sit amet.</span></div>
+            </div>
+            <div class="allchatsitem">
+                <img src="img/anton.png" alt="anton">
+                <div class="chatblock"><span class="message">Lorem ipsum dolor sit amet.</span></div>
+            </div>     
+        </div>
+        <div class="bottomdialogs">
+            <div class="textinputdiaolgs">
+                <input class="form-control im_dialogs_input_field" type="search" placeholder="Ваш текст..." autocomplete="off">    
+            </div>
+            <div class="im_dialogs_send_field"></div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/Js.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- Модальное окно №1 -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog newgroupwidth">
+      <div class="modal-content">
+        <div class="modal-header newgroupheader">
+          <h5 class="modal-title" id="staticBackdropLabel">Новая группа</h5>
+          <button type="button" class="btn-close maincolor" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body newgroupbody">
+            <div class="dialogs_search">
+                <input class="form-control im_dialogs_search_field" type="search" placeholder="Поиск" autocomplete="off">
+            </div>
+            <div class="alldialogs">
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Offline</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Создать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Модальное окно №2 -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog newgroupwidth">
+      <div class="modal-content">
+        <div class="modal-header newgroupheader">
+          <h5 class="modal-title" id="staticBackdropLabel">Контакты</h5>
+          <button type="button" class="btn-close maincolor" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body newgroupbody">
+            <div class="dialogs_search">
+                <input class="form-control im_dialogs_search_field" type="search" placeholder="Поиск" autocomplete="off">
+            </div>
+            <div class="alldialogs">
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Offline</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+                <div class="alldialogsitem">
+                    <img src="img/anton.png" alt="anton">
+                    <div class="dialoginfonewgroup"><span class="namegroup">Anton</span><span class="status">Online</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Начать чат</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Модальное окно №3 -->
+<div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog newgroupwidth">
+      <div class="modal-content">
+        <div class="modal-header newgroupheader">
+          <h5 class="modal-title" id="staticBackdropLabel">Настройки</h5>
+          <button type="button" class="btn-close maincolor" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+            <div class="settinghead">
+                <div class="profileimg">
+                <img src="img/anton.png" alt="anton">
+                </div>
+                <div class="profilename">
+                    Anton<br>
+                <span class="profilestatus">Online</span>
+                </div>
+            </div>
+            <div class="settingbody">
+                <div class="settingtelephone">
+                Account<br>
+                <span class="telephone">+375(29)9638433</span><br>
+                <span class="changenumber" href="#">Click to change phone number</span>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+</div>  
